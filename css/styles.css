@@ -74,12 +74,19 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 .clearfix::after{
     content: ' ';
     clear: both;
     display: block;
 }
+html, body{
+    scroll-behavior: smooth;
+}
+
+
+
+
+
 body{
     font-family: 'Roboto';
     color: #212121;
@@ -96,6 +103,9 @@ body{
     font-size: 36px;
     text-align: center;
     color: #212121;
+}
+button{
+    cursor: pointer;
 }
 
 .header {
@@ -149,7 +159,7 @@ body{
     width: 100%;
 }
 .hero-box {
-    max-width: 696px;;
+    max-width: 696px;
     margin: 0 auto;
     text-align: center;
 }
@@ -169,7 +179,6 @@ body{
     border-radius: 4px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: #2196f3;
-    cursor: pointer;
 }
 .hero-btn:hover{
     background: #1e8feb;
@@ -283,4 +292,65 @@ body{
 }
 .footer-address a:hover {
 	color: #2196F3;
+}
+
+
+/* PORTFOLIO PAGE */
+.portfolio-container {
+    padding: 94px 0;
+    
+}
+.buttons-section {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 0 50px;
+}
+.btn-item {
+    padding: 11px 27px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    color: #212121;
+    background: #f5f4fa;
+}
+.btn-item:hover{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
+    background: #2196f3;
+    color: #fff;
+}
+.btn-item:active{
+    background: #39a1f6;
+}
+
+.portfolio-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.portfolio-card {
+    flex: 1 1 30%;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+.portfolio-img {
+    width: 100%;
+    height: 294px;
+    object-fit: cover;
+    margin: 0 0 20px;
+}
+.portfolio-card-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+}
+.portfolio-card-desc {
+    font-weight: 400;
+    line-height: 1.8;
+    color: #757575;
+}
+.portfolio-card-title-wrapper {
+    padding: 0 24px 20px;
 }
