@@ -29,7 +29,7 @@
     font-style: normal;
     font-display: swap;
 }
-*, ::after, ::before{
+*, *::after, *::before{
     box-sizing: border-box;
 }
 html, body, div, span, applet, object, iframe,
@@ -297,7 +297,7 @@ button{
 
 /* PORTFOLIO PAGE */
 .portfolio-container {
-    padding: 94px 0;
+    padding: 94px 15px;
     
 }
 .buttons-section {
@@ -330,16 +330,14 @@ button{
     gap: 30px;
     flex-wrap: wrap;
 }
-.portfolio-card {
+.card-box{
     flex: 1 1 30%;
-    border: 1px solid #eee;
-    cursor: pointer;
 }
 .portfolio-img {
     width: 100%;
     height: 294px;
     object-fit: cover;
-    margin: 0 0 20px;
+    
 }
 .portfolio-card-title {
     font-weight: 700;
@@ -352,5 +350,31 @@ button{
     color: #757575;
 }
 .portfolio-card-title-wrapper {
-    padding: 0 24px 20px;
+    padding: 20px 24px 20px;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+.img-box{
+    position: relative;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.card-pop-up{
+    background: rgba(33, 150, 243, 0.9);
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    line-height: 156%;
+    padding: 63px 24px;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+.card-box:hover{
+    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+.card-box:hover .card-pop-up{
+    opacity: 1;
 }
